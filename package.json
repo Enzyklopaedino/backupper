@@ -2,6 +2,7 @@
 	"name": "wg-helper",
 	"private": true,
 	"version": "1.0.0",
+    "type": "module",
 	"scripts": {
 		"dev": "rsbuild dev --open",
 		"build": "rsbuild build",
@@ -23,7 +24,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@rsbuild/core": "^1.1.13",
+		"@rsbuild/core": "^1.5.7",
 		"@rsbuild/plugin-react": "^1.0.7",
 		"@types/react": "^19.0.0",
 		"@types/react-dom": "^19.0.0",

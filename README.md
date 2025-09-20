@@ -27,3 +27,13 @@ Preview the production build locally:
 ```bash
 pnpm preview
 ```
+
+Start the App (Development, Nixos):
+
+```bash
+nix-shell -p bun
+
+bun add -D @rsbuild/core
+
+bunx rsbuild dev --open
+```
