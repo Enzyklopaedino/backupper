@@ -6,7 +6,7 @@ export const Upload = () => {
 				viewBox="0 0 24 24"
 				stroke-width="1.5"
 				fill="none"
-				className="size-40 stroke-teal-500"
+				className="size-40 stroke-teal-500 hover:stroke-teal-300"
 			>
 				<path
 					stroke-linecap="round"
