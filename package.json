@@ -2,7 +2,7 @@
 	"name": "wg-helper",
 	"private": true,
 	"version": "1.0.0",
-    "type": "module",
+	"type": "module",
 	"scripts": {
 		"dev": "rsbuild dev --open",
 		"build": "rsbuild build",
@@ -16,15 +16,16 @@
 		"@radix-ui/react-slot": "^1.1.1",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
-		"lucide-react": "^0.469.0",
+		"lucide-react": "^0.553.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
+		"react-router-dom": "^7.9.5",
 		"tailwind-merge": "^2.6.0",
 		"tailwindcss-animate": "^1.0.7"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@rsbuild/core": "^1.5.7",
+		"@rsbuild/core": "^1.6.3",
 		"@rsbuild/plugin-react": "^1.0.7",
 		"@types/react": "^19.0.0",
 		"@types/react-dom": "^19.0.0",

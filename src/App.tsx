@@ -1,14 +1,17 @@
 import './main.css';
-import { Background } from './../components/background.tsx';
-import { Upload } from './../components/upload.tsx';
 import { Header } from './../components/header.tsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from '@/src/pages/home.tsx';
 
 const App = () => {
 	return (
-		<Background>
+		<BrowserRouter>
 			<Header title="Backupper" />
-			<Upload />
-		</Background>
+			<Routes>
+				<Route path="/" element={<Home />} />
+			</Routes>
+		</BrowserRouter>
+
 	);
 };
 
