@@ -1,7 +1,7 @@
 import './main.css';
-import { Header } from './../components/header.tsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from '@/src/pages/home.tsx';
+import { Header } from '@/components/ui/header';
 
 const App = () => {
 	return (
