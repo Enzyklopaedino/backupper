@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '@/src/components/ui/button';
 import { NutOff } from 'lucide-react';
 import type { FC } from 'react';
 import { Link } from 'react-router-dom';

@@ -1,4 +1,4 @@
-import { CircularProgress } from '@/components/ui/progress';
+import { CircularProgress } from '@/src/components/ui/progress';
 import type { FC } from 'react';
 
 export const Home: FC = () => {
