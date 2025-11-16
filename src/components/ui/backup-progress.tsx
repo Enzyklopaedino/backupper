@@ -21,8 +21,16 @@ export const BackupProgress = () => {
 				progressClassName="stroke-indigo-600"
 			/>
 			<Item className="flex flex-row space-x-4">
-				<BackupDescription description="Total space" value="2 TB" />
-				<BackupDescription description="Space used" value="1.3 TB" />
+				<BackupDescription
+					description="Total space"
+					value="2 TB"
+					color="bg-indigo-500/25"
+				/>
+				<BackupDescription
+					description="Space used"
+					value="1.3 TB"
+					color="bg-indigo-600"
+				/>
 			</Item>
 		</div>
 	);
@@ -31,17 +39,19 @@ export const BackupProgress = () => {
 type DescriptionBackupProps = {
 	description: string;
 	value: string;
+	color: 'bg-indigo-500/25' | 'bg-indigo-600';
 };
 
 const BackupDescription: FC<DescriptionBackupProps> = ({
 	description,
 	value,
+	color,
 }) => {
 	return (
 		<ItemContent className="flex flex-col">
 			<ItemDescription className="text-xs">{description}</ItemDescription>
 			<div className="flex flex-row items-center space-x-2">
-				<div className="bg-indigo-500/25 rounded-full w-4 h-4" />
+				<div className={`${color} rounded-full w-4 h-4`} />
 				<ItemTitle className="text-sm">{value}</ItemTitle>
 			</div>
 		</ItemContent>

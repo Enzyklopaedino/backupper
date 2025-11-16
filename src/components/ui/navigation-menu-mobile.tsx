@@ -6,14 +6,12 @@ import {
 	navigationMenuTriggerStyle,
 } from '@/src/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
-import { BookOpen, Home, Settings, User } from 'lucide-react';
+import { Folder, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const navigationMenuItems = [
 	{ title: 'Home', href: '/', icon: Home, isActive: true },
-	{ title: 'Docs', href: '/docs', icon: BookOpen },
-	{ title: 'Account', href: '/account', icon: Settings },
-	{ title: 'Settings', href: '/settings', icon: User },
+	{ title: 'Backups', href: '/backups', icon: Folder },
 ];
 
 export default function NavigationMenuMobile() {
