@@ -1,9 +1,11 @@
+import Example from '@/src/components/ui/dropzoneExample';
 import { CircularProgress } from '@/src/components/ui/progress';
+import { Folder } from 'lucide-react';
 import type { FC } from 'react';
 
 export const Home: FC = () => {
 	return (
-		<div className="flex items-center flex-col">
+		<div className="flex items-center flex-col space-y-2 pt-6">
 			<CircularProgress
 				value={64}
 				size={120}
@@ -30,6 +32,10 @@ export const Home: FC = () => {
 					</div>
 				</div>
 			</div>
+			<div className="">
+				<Folder />
+			</div>
+			<Example />
 		</div>
 	);
 };

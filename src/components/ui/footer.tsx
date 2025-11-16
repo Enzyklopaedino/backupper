@@ -1,4 +1,4 @@
-import NavigationMenuMobile from '@/src/components/customized/navigation-menu/navigation-menu-08';
+import NavigationMenuMobile from '@/src/components/ui/navigation-menu-mobile';
 
 export const Footer = () => {
 	return (
