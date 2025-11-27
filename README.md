@@ -5,7 +5,7 @@
 Install the dependencies:
 
 ```bash
-pnpm install
+bun install
 ```
 
 ## Get Started
@@ -13,19 +13,19 @@ pnpm install
 Start the dev server:
 
 ```bash
-pnpm dev
+bun run dev
 ```
 
 Build the app for production:
 
 ```bash
-pnpm build
+bun run build
 ```
 
 Preview the production build locally:
 
 ```bash
-pnpm preview
+bun run preview
 ```
 
 Start the App (Development, Nixos):
@@ -35,5 +35,5 @@ nix-shell -p bun
 
 bun add -D @rsbuild/core
 
-bunx rsbuild dev --open
+bun run dev 
 ```
