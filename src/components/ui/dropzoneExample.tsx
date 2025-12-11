@@ -1,5 +1,6 @@
 'use client';
 
+import { uploadFile } from '@/src/api/post';
 import {
 	Dropzone,
 	DropzoneContent,
@@ -13,6 +14,9 @@ const Example = () => {
 	const handleDrop = (files: File[]) => {
 		console.log(files);
 		setFiles(files);
+		for (const file of files) {
+			uploadFile(file);
+		}
 	};
 
 	return (

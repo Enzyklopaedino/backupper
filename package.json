@@ -4,7 +4,9 @@
 	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
-		"dev": "rsbuild dev --open",
+		"dev:fe": "rsbuild dev --open",
+		"dev:be": "bun run ./src/server/server.ts",
+		"dev": "bun run dev:be & bun run dev:fe",
 		"build": "rsbuild build",
 		"preview": "rsbuild preview",
 		"test": "vitest --coverage",
@@ -27,8 +29,10 @@
 		"tailwindcss-animate": "^1.0.7"
 	},
 	"devDependencies": {
-		"@rsbuild/core": "^1.6.3",
+		"@rsbuild/core": "^1.6.14",
 		"@rsbuild/plugin-react": "^1.0.7",
+		"@types/bun": "^1.3.4",
+		"@types/node": "^25.0.0",
 		"@types/react": "^19.0.0",
 		"@types/react-dom": "^19.0.0",
 		"@vitest/coverage-v8": "^2.1.8",
