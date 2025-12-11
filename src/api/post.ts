@@ -1,8 +1,13 @@
+import assert from 'node:assert';
+
 export async function uploadFile(file: File) {
 	const formData = new FormData();
 	formData.append('file', file);
 
-	const response = await fetch('http://localhost:3000', {
+	const backendURL = process.env.BACKEND_URL;
+	assert(backendURL);
+
+	const response = await fetch(backendURL, {
 		method: 'POST',
 		body: formData,
 	});

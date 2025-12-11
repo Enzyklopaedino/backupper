@@ -4,8 +4,11 @@ import assert from 'node:assert';
 Bun.serve({
 	port: 3000,
 	async fetch(request) {
+		const frontendURL = process.env.FRONTEND_URL;
+		assert(frontendURL);
+
 		const corsHeaders = {
-			'Access-Control-Allow-Origin': 'http://localhost:3001',
+			'Access-Control-Allow-Origin': frontendURL,
 			'Access-Control-Allow-Methods': 'POST',
 			'Access-Control-Allow-Headers': '',
 		};
