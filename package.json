@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev:fe": "rsbuild dev --open",
-		"dev:be": "bun run ./src/server/server.ts",
+		"dev:be": "bun run ./server/server.ts",
 		"dev": "bun run dev:be & bun run dev:fe",
 		"build": "rsbuild build",
 		"preview": "rsbuild preview",
