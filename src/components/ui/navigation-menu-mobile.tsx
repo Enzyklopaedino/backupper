@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const navigationMenuItems = [
 	{ title: 'Home', href: '/', icon: Home, isActive: true },
-	{ title: 'Backups', href: '/backups', icon: Folder },
+	// { title: 'Backups', href: '/backups', icon: Folder },
 ];
 
 export default function NavigationMenuMobile() {
