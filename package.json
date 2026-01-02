@@ -12,7 +12,8 @@
 		"test": "vitest --coverage",
 		"format": "bunx biome format --write .",
 		"lint": "bunx biome lint --write .",
-		"check": "bunx biome check --write ."
+		"check": "bunx biome check --write .",
+		"start": "bun ./server/index.ts"
 	},
 	"dependencies": {
 		"@radix-ui/react-navigation-menu": "^1.2.14",

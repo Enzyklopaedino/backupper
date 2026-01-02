@@ -12,7 +12,7 @@ const Example = () => {
 	const [files, setFiles] = useState<File[] | undefined>();
 
 	const handleDrop = (files: File[]) => {
-		console.log(files);
+		console.log(`Files to be backupped: ${JSON.stringify(files, null, 2)}`);
 		setFiles(files);
 		for (const file of files) {
 			uploadFile(file);

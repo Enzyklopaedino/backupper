@@ -3,7 +3,8 @@ import assert from 'node:assert';
 
 Bun.serve({
 	async fetch(request) {
-		const frontendURL = process.env.FRONTEND_URL ?? 'http://localhost:3001';
+		console.log('bun serve');
+		const frontendURL = import.meta.env.FRONTEND_URL ?? 'http://localhost:3001';
 
 		const corsHeaders = {
 			'Access-Control-Allow-Origin': frontendURL,
@@ -18,7 +19,7 @@ Bun.serve({
 		await mkdir('uploads', { recursive: true });
 
 		assert(file instanceof File);
-		await Bun.write(`src/server/uploads/${file.name}`, file);
+		await Bun.write(`server/uploads/${file.name}`, file);
 
 		return new Response('OK', {
 			headers: corsHeaders,
