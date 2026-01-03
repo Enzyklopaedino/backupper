@@ -3,7 +3,7 @@ import assert from 'node:assert';
 
 Bun.serve({
 	async fetch(request) {
-		console.log('bun serve');
+		console.log('downloading a file');
 		const frontendURL = import.meta.env.FRONTEND_URL ?? 'http://localhost:3001';
 
 		const corsHeaders = {
