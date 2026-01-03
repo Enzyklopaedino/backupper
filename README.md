@@ -1,5 +1,19 @@
 # Rsbuild Project
 
+## Prerequisites
+
+Bun needs to be installed on the system.
+
+Bash script to install bun: 
+```bash
+curl -fsSL https://bun.com/install | bash
+```
+
+Install bun through npm:
+```bash
+npm install -g bun
+```
+
 ## Setup
 
 Install the dependencies:
@@ -32,7 +46,9 @@ Preview the production build locally:
 bun run preview
 ```
 
-Start the App (Development, Nixos):
+## NixOS
+
+Start the app for local development:
 
 ```bash
 nix-shell -p bun
