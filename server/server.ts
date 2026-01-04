@@ -19,7 +19,9 @@ Bun.serve({
 		await mkdir('uploads', { recursive: true });
 
 		assert(file instanceof File);
-		await Bun.write(`server/uploads/${file.name}`, file);
+
+		const destinationDir = import.meta.env.DESTINATION_DIR ?? 'server/uploads/';
+		await Bun.write(`${destinationDir}/${file.name}`, file);
 
 		return new Response('OK', {
 			headers: corsHeaders,

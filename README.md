@@ -24,9 +24,9 @@ bun install
 
 ## Local development
 
-In case you wish to configure the ports that run this project in development, under `./env/.env.example` you'll find all the environment variables listed that you can configure,
-with example values. Paste the content to a new file called `.env` or `.env.local`, which should be located under `/env` and update the values.
-this is an optional step, you can run this project without configuring environment variables, as it will default to use port 3000 and 3001.
+In case you wish to configure the environment variables of this project in development, under `./env/.env.example` you'll find all the environment variables listed that you can configure,
+with example values. Paste the content to a new file called `.env` or `.env.local`, which should be located at the root of the project. Update the values. 
+this is an optional step, you can run this project without configuring environment variables.
 
 Start the local dev server:
 
