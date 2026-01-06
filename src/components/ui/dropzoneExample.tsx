@@ -11,8 +11,7 @@ import { useState } from 'react';
 const Example = () => {
 	const [files, setFiles] = useState<File[] | undefined>();
 
-	const handleDrop = (files: File[]) => {
-		console.log(`Files to be backupped: ${JSON.stringify(files, null, 2)}`);
+	const handleDrop = async (files: File[]) => {
 		setFiles(files);
 		for (const file of files) {
 			uploadFile(file);

@@ -1,3 +1,4 @@
+import { getDiskInfo } from '@/src/api/post';
 import {
 	ItemContent,
 	ItemDescription,
@@ -8,6 +9,7 @@ import { Item } from '@radix-ui/react-navigation-menu';
 import type { FC } from 'react';
 
 export const BackupProgress = () => {
+	getDiskInfo();
 	return (
 		<div className="flex items-center flex-col">
 			<CircularProgress
