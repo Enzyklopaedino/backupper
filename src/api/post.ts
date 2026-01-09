@@ -15,7 +15,12 @@ export async function uploadFile(file: File) {
 	console.log(response.text());
 }
 
-export async function getDiskInfo() {
+type DiskInfo = {
+	total: number;
+	used: number;
+};
+
+export async function getDiskInfo(): Promise<DiskInfo> {
 	const backendURL = import.meta.env.PUBLIC_BACKEND_URL;
 	if (!backendURL) {
 		throw new Error('The environement variable BACKEND_URL is missing');
@@ -25,7 +30,5 @@ export async function getDiskInfo() {
 	const response = await fetch(`${backendURL}/api/diskspace`, {
 		method: 'GET',
 	});
-	const parse = await response.json();
-	console.log(`response ${parse}`);
-	console.log('disk space time wooo');
+	return await response.json();
 }

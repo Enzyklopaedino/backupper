@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils';
 
 interface CircularProgressProps {
-	value: number;
+	value: string;
 	renderLabel?: (progress: number) => number | string;
 	size?: number;
 	strokeWidth?: number;

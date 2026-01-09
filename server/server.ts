@@ -38,6 +38,11 @@ function bytesToTB(bytes: number): number {
 	return Number((bytes / 1024 ** 4).toFixed(1));
 }
 
+type DiskInfo = {
+	total: number;
+	used: number;
+};
+
 async function getDiskInfo(corsHeaders) {
 	console.log('getting disk info');
 	const { total, free, available } = await check('/');
@@ -47,10 +52,9 @@ async function getDiskInfo(corsHeaders) {
 		`disk info: ${bytesToTB(total)}, ${bytesToTB(used)}, ${bytesToTB(available)}`,
 	);
 
-	const diskInfo = {
+	const diskInfo: DiskInfo = {
 		total: bytesToTB(total),
 		used: bytesToTB(used),
-		free: bytesToTB(available),
 	};
 
 	return new Response(JSON.stringify(diskInfo), {
