@@ -2,6 +2,11 @@
 
 ## Prerequisites
 
+Any system works fine as the client, but the server has to be on a Linux system for this project to work (because the stroage access differs for different operating systems).
+This means this projects only supports Linux servers for production and Linux in general for local development.
+The reason is that I don't have another environment to test anything else. Mac should work out of the box, but I can't gurantee that.
+Windows will require minimal adjustments to work.
+
 Bun needs to be installed on the system.
 
 Bash script to install bun: 
